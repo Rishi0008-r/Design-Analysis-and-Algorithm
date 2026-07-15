@@ -1,15 +1,4 @@
 #include <stdio.h>
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;}
-
-
-// Partition function
- int partition(int arr[], int low, int high) {
-    int pivot = arr[high];
-    int i = low - 1;
-
     for (int j = low; j < high; j++) {
         if (arr[j] < pivot) {
             i++;
@@ -28,7 +17,14 @@ void quickSort(int arr[], int low, int high) {
 
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
-    }// Function to print an array
+    }
+
+
+
+    
+}
+
+// Function to print an array
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
@@ -57,10 +53,4 @@ int main() {
     printArray(arr, n);
 
     return 0;
-}    
-
-
-
-    
-}
 }
